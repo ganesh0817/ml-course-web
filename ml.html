@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine Learning Course - Second Year AI&DS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+        .smooth-scroll {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 smooth-scroll">
+    <!-- Header -->
+    <header class="bg-green-600 text-white sticky top-0 z-10">
+        <nav class="container mx-auto flex justify-between items-center py-4">
+            <h1 class="text-2xl font-bold">ML for AI&DS</h1>
+            <ul class="flex space-x-6">
+                <li><a href="#home" class="hover:text-gray-200">Home</a></li>
+                <li><a href="#about" class="hover:text-gray-200">About</a></li>
+                <li><a href="#curriculum" class="hover:text-gray-200">Curriculum</a></li>
+                <li><a href="#contact" class="hover:text-gray-200">Enroll</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="bg-green-500 text-white py-16">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-4">Introduction to Machine Learning</h2>
+            <p class="text-lg mb-6">Kickstart your AI journey with hands-on ML skills for second-year AI&DS students.</p>
+            <a href="#contact" class="bg-yellow-400 text-black py-2 px-6 rounded-full hover:bg-yellow-500">Enroll Now</a>
+        </div>
+    </section>
+
+    <!-- Course Overview -->
+    <section id="about" class="py-16">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-8">Course Overview</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h3 class="text-xl font-semibold mb-2">Duration</h3>
+                    <p>One semester, 3 hours/week</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h3 class="text-xl font-semibold mb-2">Level</h3>
+                    <p>Beginner (Python basics required)</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h3 class="text-xl font-semibold mb-2">Outcomes</h3>
+                    <p>Build ML models, analyze data, prepare for internships</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Curriculum -->
+    <section id="curriculum" class="bg-gray-200 py-16">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-8">Curriculum</h2>
+            <ul class="list-disc pl-6 max-w-2xl mx-auto">
+                <li class="mb-2">Unit 1: Python Recap (NumPy, Pandas)</li>
+                <li class="mb-2">Unit 2: Data Preprocessing and Visualization</li>
+                <li class="mb-2">Unit 3: Linear Regression and Evaluation Metrics</li>
+                <li class="mb-2">Unit 4: Classification (Logistic Regression, KNN)</li>
+                <li class="mb-2">Unit 5: Mini-Project with Scikit-learn</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Instructor -->
+    <section class="py-16">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-8">Your Instructor</h2>
+            <div class="max-w-lg mx-auto">
+                <img src="https://via.placeholder.com/150" alt="Dr. Ganesh Naidu Gopu" class="rounded-full mx-auto mb-4">
+                <h3 class="text-xl font-semibold">Dr. Ganesh Naidu Gopu</h3>
+                <p>Professor, AI & Data Science</p>
+                <p>Expert in ML and predictive modeling with extensive academic and research experience.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enrollment Form -->
+    <section id="contact" class="bg-gray-200 py-16">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-8">Enroll in the Course</h2>
+            <form id="enroll-form" class="max-w-lg mx-auto">
+                <div class="mb-4">
+                    <label for="name" class="block text-sm font-medium">Full Name</label>
+                    <input type="text" id="name" class="w-full p-2 border rounded" required>
+                </div>
+                <div class="mb-4">
+                    <label for="student-id" class="block text-sm font-medium">Student ID</label>
+                    <input type="text" id="student-id" class="w-full p-2 border rounded" required>
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-sm font-medium">Email</label>
+                    <input type="email" id="email" class="w-full p-2 border rounded" required>
+                </div>
+                <button type="submit" class="bg-green-600 text-white py-2 px-6 rounded hover:bg-green-700">Submit</button>
+            </form>
+            <p class="text-center mt-4">For inquiries, contact: <a href="mailto:gopuganeshnaidu8@gmail.com" class="text-green-600 hover:underline">gopuganeshnaidu8@gmail.com</a></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-green-600 text-white py-4">
+        <div class="container mx-auto text-center">
+            <p>© 2025 AI&DS Machine Learning Course. Designed by Dr. Ganesh Naidu Gopu.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        document.getElementById('enroll-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const studentId = document.getElementById('student-id').value;
+            const email = document.getElementById('email').value;
+
+            if (name && studentId && email) {
+                alert(`Thank you, ${name}! Your enrollment request (Student ID: ${studentId}) has been submitted.`);
+                this.reset();
+            } else {
+                alert('Please fill out all fields.');
+            }
+        });
+    </script>
+</body>
+</html>
